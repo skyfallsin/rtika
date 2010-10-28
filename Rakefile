@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "rtika"
     gem.summary = %Q{A JRuby wrapper around the Apache Tika library}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.description = %Q{rTika is a JRuby wrapper around the Apache Tika content extraction library}
     gem.email = "pradeepe@gmail.com"
     gem.homepage = "http://github.com/skyfallsin/rtika"
     gem.authors = ["Pradeep Elankumaran"]
