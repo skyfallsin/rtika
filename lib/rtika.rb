@@ -1,8 +1,8 @@
 raise "You need JRuby to use rRTika" unless RUBY_PLATFORM =~ /java/
 require 'java' 
 
-Dir[File.join(File.dirname(__FILE__), "tika", "*.jar")].each do |jar|
-  puts "require #{jar}"
+Dir[File.join(File.dirname(__FILE__), "*.jar")].each do |jar|
+  #puts "require #{jar}"
   require jar
 end
 
@@ -12,6 +12,7 @@ module RTika
   import org.apache.tika.metadata.Metadata
 
   class ParsedResult
+    attr_accessor :content, :metadata
     def initialize(content, metadata)
       @content, @metadata = content, metadata
     end
