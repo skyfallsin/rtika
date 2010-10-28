@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Pradeep Elankumaran"]
-  s.date = %q{2010-10-27}
-  s.description = %q{TODO: longer description of your gem}
+  s.date = %q{2010-10-28}
+  s.description = %q{rTika is a JRuby wrapper around the Apache Tika content extraction library}
   s.email = %q{pradeepe@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
