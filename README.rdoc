@@ -1,6 +1,7 @@
-= rtika
+= rTika
 
-Description goes here.
+A JRuby wrapper around the excellent Apache Tika content extraction library.
+Feed rTika your files and get extracted text and metadata in return.
 
 == Note on Patches/Pull Requests
  
