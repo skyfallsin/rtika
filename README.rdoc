@@ -4,18 +4,19 @@ A JRuby wrapper around the excellent Apache Tika content extraction library.
 Feed rTika your files and get extracted text and metadata in return.
 
 == Usage
+Make sure you're on JRuby first.
 
-require 'rubygems'
-require 'rtika'
+  require 'rubygems'
+  require 'rtika'
 
-result = RTika::FileParser.parse("mywordfile.doc")
-puts result.content
-puts result.title
-puts result.author
+  result = RTika::FileParser.parse("mywordfile.doc")
+  puts result.content
+  puts result.title
+  puts result.author
 
-result = RTika::StringParser.parse("<html><body>this is my very ... long ... string</body></html>")
-puts result.content
-puts result.title
+  result = RTika::StringParser.parse("<html><body>this is my very ... long ... string</body></html>")
+  puts result.content
+  puts result.title
 
 == Note on Patches/Pull Requests
  
