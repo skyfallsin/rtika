@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
      "lib/tika-bundle-0.7.jar",
      "lib/tika-core-0.7.jar",
      "lib/tika-parsers-0.7.jar",
+     "rtika.gemspec",
      "test/helper.rb",
      "test/test_rtika.rb"
   ]
