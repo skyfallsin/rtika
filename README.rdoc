@@ -10,13 +10,15 @@ Make sure you're on JRuby first.
   require 'rtika'
 
   result = RTika::FileParser.parse("mywordfile.doc")
-  puts result.content
-  puts result.title
-  puts result.author
+  puts result.content # prints out the document's contents
+  puts result.title   # fetches title from the doc's metadata
+  puts result.author  # fetches author from the doc's metadata
 
-  result = RTika::StringParser.parse("<html><body>this is my very ... long ... string</body></html>")
-  puts result.content
-  puts result.title
+  result = RTika::StringParser.parse("<html>
+		<head><title>MYTITLE</title></head>
+		<body>this is my very ... long ... string</body></html>")
+  puts result.content # returns <body> contents
+  puts result.title   # returns <title> contents
 
 == Note on Patches/Pull Requests
  
