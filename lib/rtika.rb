@@ -61,7 +61,7 @@ module RTika
 
     def process
       input_stream = java.io.ByteArrayInputStream.new(@input_string.to_java.get_bytes)
-      content = RTika::BodyContentHandler.new
+      content = RTika::BodyContentHandler.new(-1)
       metadata = RTika::Metadata.new
 
       @parser.parse(input_stream, content, metadata)
@@ -78,7 +78,7 @@ module RTika
 
     def process 
       input_stream = java.io.FileInputStream.new(java.io.File.new(@filename))
-      content =  RTika::BodyContentHandler.new
+      content =  RTika::BodyContentHandler.new(-1)
       metadata = RTika::Metadata.new
       metadata.set("filename", File.basename(@filename))
 
@@ -97,7 +97,7 @@ module RTika
 
     def process 
       input_stream = java.io.ByteArrayInputStream.new(@content.to_java.get_bytes)
-      content =  RTika::BodyContentHandler.new
+      content =  RTika::BodyContentHandler.new(-1)
       metadata = RTika::Metadata.new
       metadata.set("filename", File.basename(@url))
 
