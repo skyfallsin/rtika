@@ -20,6 +20,11 @@ Make sure you're on JRuby first.
   puts result.content # returns <body> contents
   puts result.title   # returns <title> contents
 
+Options
+  
+  :remove_boilerplate => true
+    # uses the Boilerpipe library that ships with Tika to remove headers & footers
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
