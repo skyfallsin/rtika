@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rtika}
-  s.version = "0.2.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Pradeep Elankumaran"]
-  s.date = %q{2010-11-03}
+  s.date = %q{2010-11-09}
   s.description = %q{rTika is a JRuby wrapper around the Apache Tika content extraction library}
   s.email = %q{pradeepe@gmail.com}
   s.extra_rdoc_files = [
@@ -24,10 +24,10 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/rtika.rb",
-     "lib/tika-app-0.7.jar",
-     "lib/tika-bundle-0.7.jar",
-     "lib/tika-core-0.7.jar",
-     "lib/tika-parsers-0.7.jar",
+     "lib/tika-app-0.9-SNAPSHOT.jar",
+     "lib/tika-bundle-0.9-SNAPSHOT.jar",
+     "lib/tika-core-0.9-SNAPSHOT.jar",
+     "lib/tika-parsers-0.9-SNAPSHOT.jar",
      "rtika.gemspec",
      "test/helper.rb",
      "test/test_rtika.rb"
