@@ -17,5 +17,13 @@ tmtags
 coverage
 rdoc
 pkg
+/.bundle/
+/.yardoc
+/_yardoc/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
 
-## PROJECT::SPECIFIC
+# rspec failure tracking
+.rspec_status
