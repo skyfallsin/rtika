@@ -11,6 +11,7 @@ module RTika
   import org.apache.tika.sax.WriteOutContentHandler
   import org.apache.tika.parser.AutoDetectParser
   import org.apache.tika.metadata.Metadata
+  import org.apache.tika.config.TikaConfig
 end
 
 require "rtika/version"

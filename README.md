@@ -40,6 +40,7 @@ Make sure you're on JRuby first.
 ```
 
 Options `:remove_boilerplate => true` uses the Boilerpipe library that ships with Tika to remove headers & footers.
+Options `tika_config: 'path/to/tika_config.xml'` configures parsers and detectors. More [here](https://tika.apache.org/1.9/configuring.html).
 
 ## Note on Patches/Pull Requests
 

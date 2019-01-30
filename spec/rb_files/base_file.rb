@@ -1,5 +1,3 @@
-require 'pathname'
-
 module RbFiles
   class BaseFile
     def fixture_dir

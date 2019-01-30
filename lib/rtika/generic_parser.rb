@@ -8,6 +8,10 @@ module RTika
       @options[:remove_boilerplate] && @options[:remove_boilerplate] == true
     end
 
+    def use_custom_tika_config?
+      @options.key? :tika_config
+    end
+
     def initialize(*args)
       @options = args.last
 
@@ -22,7 +26,7 @@ module RTika
     end
 
     def parse
-      @parser = RTika::AutoDetectParser.new
+      @parser = build_parser
       @content, @metadata = process
 
       if remove_boilerplate?
@@ -34,6 +38,23 @@ module RTika
 
     def process
       raise "override this in your parser, return content and metadata"
+    end
+
+    private
+
+    def build_parser
+      use_custom_tika_config? ? build_custom_parser : build_default_parser
+    end
+
+    def build_custom_parser
+      config = RTika::TikaConfig.new @options[:tika_config]
+      detector = config.getDetector
+
+      RTika::AutoDetectParser.new config
+    end
+
+    def build_default_parser
+      RTika::AutoDetectParser.new
     end
   end
 end

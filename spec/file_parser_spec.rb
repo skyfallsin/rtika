@@ -19,4 +19,23 @@ RSpec.describe RTika::FileParser, type: :parser do
       end
     end
   end
+
+  context 'when pdf file with custom tika config' do
+    let(:file) { RbFiles::SampleFile.new }
+    let(:parser_opts) do
+      { tika_config: pathname_fixture('tika-config.xml').to_s }
+    end
+
+    it 'parser returns content' do
+      expect(subject.parse.content).to eq file.pages.join('')
+    end
+
+    context 'parser returns metadata' do
+      let(:metadata) { subject.parse.metadata }
+
+      it '#filename' do
+        expect(metadata.get('filename')).to eq file.name
+      end
+    end
+  end
 end
